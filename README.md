@@ -35,13 +35,13 @@
 
 
 <div class="wp-block-group">
-<pre class="wp-block-own-copy-code-line-block wp-block-code has-24292-eff-color has-cyan-bluish-gray-background-color has-text-color has-background has-1-125-rem-font-size"><code>echo "prompt=""$(echo $(hostname) | cut -d . -f1)"":""$(basename "$(pwd)")" "$(whoami)""$"
+<pre class="wp-block-own-copy-code-line-block wp-block-code has-24292-eff-color has-cyan-bluish-gray-background-color has-text-color has-background has-1-125-rem-font-size"><code>echo "prompt=""$(echo $(hostname))""@""$(echo $(hostname))"":""$(pwd | sed "s/\/home\/$(whoami)/~/")""$"
 </code></pre>
 
 
 
 <details class="wp-block-details"><summary>出力結果</summary>
-<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>prompt=hostname:currenctDirectory accountName$</code></pre>
+<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>prompt=hostname@hostname:currenctDirectory$</code></pre>
 </details>
 </div>
 
@@ -154,13 +154,13 @@
 
 
 
-<pre class="wp-block-own-copy-code-line-block wp-block-code has-24292-eff-color has-cyan-bluish-gray-background-color has-text-color has-background has-1-125-rem-font-size"><code>echo "prompt=""$(echo $(hostname) | cut -d . -f1)"":""$(basename "$(pwd)")" "$(whoami)""$"
+<pre class="wp-block-own-copy-code-line-block wp-block-code has-24292-eff-color has-cyan-bluish-gray-background-color has-text-color has-background has-1-125-rem-font-size"><code>echo "prompt=""$(echo $(hostname))""@""$(echo $(hostname))"":""$(pwd | sed "s/\/home\/$(whoami)/~/")""$"
 </code></pre>
 
 
 
 <details class="wp-block-details"><summary>詳細</summary>
-<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>prompt=hostname:currenctDirectory accountName$</code></pre>
+<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>prompt=hostname@hostname:currenctDirectory$</code></pre>
 </details>
 </div>
 </details>
